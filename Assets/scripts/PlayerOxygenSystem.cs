@@ -10,6 +10,8 @@ public class PlayerOxygenSystem : MonoBehaviour
 
     private int lossPerTick = 1;
 
+    private int rechargePerTick = 5;
+    
     private int currentO2 = 1000;
 
     public int getCurrentO2()
@@ -60,5 +62,12 @@ public class PlayerOxygenSystem : MonoBehaviour
         {
             currentO2 -= lossPerTick;
         }
+
+        if (isInsideOxygenSource())
+        {
+            currentO2 += rechargePerTick;
+            currentO2 = Math.Min(currentO2, maxO2);
+        }
+        
     }
 }
