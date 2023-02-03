@@ -4,17 +4,30 @@ using UnityEngine;
 
 public class O2Bar : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject lifebarVisualizer;
-    
+
+    private int maxO2 = 1000;
+
+    private int lossPerTick = 1;
+
+    private int currentO2 = 1000;
+
+    private Vector3 startScale;
+
     void Start()
     {
-        
+        startScale = lifebarVisualizer.transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (currentO2 > 0)
+        {
+            currentO2 -= lossPerTick;
+        }
+
+        lifebarVisualizer.transform.localScale = new Vector3(startScale.x * currentO2 / 1000, startScale.y , startScale.z);
         
     }
 }
