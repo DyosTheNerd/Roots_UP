@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NiceObjectScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+
+    public int speed = 13;
+
     // Start is called before the first frame update
-
-    
-
     void Start()
     {
         
