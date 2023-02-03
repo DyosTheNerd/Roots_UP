@@ -22,7 +22,9 @@ public class O2Bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentO2 > 0)
+        
+        
+        if (canLooseOxygen() && isCloseToOxygenSource())
         {
             currentO2 -= lossPerTick;
         }
@@ -30,4 +32,15 @@ public class O2Bar : MonoBehaviour
         lifebarVisualizer.transform.localScale = new Vector3(startScale.x * currentO2 / 1000, startScale.y , startScale.z);
         
     }
+
+    bool canLooseOxygen()
+    {
+        return currentO2 > 0;
+    }
+
+    bool isCloseToOxygenSource()
+    {
+        return false;
+    }
+    
 }
