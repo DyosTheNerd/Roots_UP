@@ -10,7 +10,6 @@ public class PlayerUseInteractionSystem : MonoBehaviour
 
     public Animator animator;
 
-
     private void OnCollisionStay2D(Collision2D other)
     {
         if (isInteracting)

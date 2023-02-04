@@ -16,17 +16,19 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
 
     public bool isAlive = false;
 
-    public List<Sprite> plantSpriteList = new List<Sprite>();
-
     public int regenRate = 6;
 
     public bool hasWater = false;
+
+    public List<Sprite> plantSpriteList = new List<Sprite>();
 
 
     public void SendWaterMessage()
     {
         hasWater = true;
-        
+
+        ChangeSprite(1);
+
     }
 
     void Update()
@@ -44,8 +46,14 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
         
 
     }
-    
-    
+
+    private void ChangeSprite(int spriteInt)
+    {
+
+        this.GetComponent<SpriteRenderer>().sprite = plantSpriteList[spriteInt];
+
+    }
+
 
     private void regenLife()
     {
