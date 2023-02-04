@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
 
     public int acceleration = 100;
     public int maxspeed = 30;
-    public float jumppower = 30;
+    public float jumppower = 15;
     public float gravityscale;
     public float jumptimer = .4f;
 
+    bool facingright = false;
     bool isGrounded = false;
     Rigidbody2D rb;
     BoxCollider2D mainCollider;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        facingright = transform.localScale.x > 0 ? true : false;
         gravityscale = _gravityscale;
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
@@ -42,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     int movedirection = 0;
     bool jumpdebounce = false;
     float timeelapsed = 0;
+    float sincejump = 0;
+    bool jumped = false;
     // Update is called once per frame
     void Update()
     {
@@ -49,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
         {
             //return;
         }
-        
+
+        transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
         
         movedirection = 0;
         if (Input.GetKey(KeyCode.D))
@@ -66,12 +71,22 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumppower);
             //rb.AddForce(new Vector2(0, jumppower));
             isGrounded = false;
+            jumped = true;
         }
-        gravityscale = 2;
+        if (jumped)
+        {
+            sincejump += Time.deltaTime;
+        }
+        if (!Input.GetKey(KeyCode.W))
+        {
+            sincejump = 0;
+        }
+        gravityscale = _gravityscale;
         if (Input.GetKey(KeyCode.S))
         {
             gravityscale = 10;
         }
+       
         timeelapsed += Time.deltaTime;
         if (timeelapsed >= jumptimer)
         {
@@ -83,10 +98,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        float dt = Time.fixedDeltaTime;
         rb.gravityScale = gravityscale;
         //rb.velocity = new Vector2(movedirection * speed,rb.velocity.y);
-        rb.AddForce(new Vector2(movedirection * acceleration, 0), ForceMode2D.Impulse);
-        rb.AddForce(new Vector2(rb.velocity.x * -0.1f, 0), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(movedirection * acceleration * dt, 0), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2((rb.velocity.x * -5f * dt), 0.0f), ForceMode2D.Impulse);
         if (rb.velocity.x > maxspeed)
         {
             rb.AddForce(new Vector2((maxspeed - rb.velocity.x) * rb.mass, 0), ForceMode2D.Impulse);
@@ -98,6 +114,10 @@ public class PlayerMovement : MonoBehaviour
         if (gravityscale > _gravityscale && rb.velocity.y > 0)
         {
             rb.AddForce(new Vector2(0, -rb.velocity.y), ForceMode2D.Impulse);
+        }
+        if (jumped && Input.GetKey(KeyCode.W) && sincejump < .05)
+        {
+            rb.AddForce(new Vector2(0, 10 * dt), ForceMode2D.Impulse);
         }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
 
@@ -113,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //Debug.DrawLine(groundCheckPos, new Vector3(), Color.blue);
             isGrounded = true;
+            jumped = false;
         }
 
         /*if (colliders.Length > 0)
