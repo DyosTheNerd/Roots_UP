@@ -2,7 +2,7 @@ using DefaultNamespace;
 using DefaultNamespace.Player;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
+public class PlayerMovement : MonoBehaviour
 {
 
     public int acceleration = 100;
@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
     public float jumppower = 20;
     public float gravityscale;
     public float jumptimer = .4f;
+    public float climbspeed = 13;
 
     bool facingright = false;
     bool isGrounded = false;
@@ -88,6 +89,7 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
                 isGrounded = false;
                 jumped = true;
             }
+            isClimbing = false;
             if (Input.GetKey(KeyCode.W) && canClimb)
             {
                 isClimbing = true;
@@ -146,7 +148,7 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
 
         if (isClimbing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 5);
+            rb.velocity = new Vector2(rb.velocity.x, climbspeed);
         }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
 
@@ -165,6 +167,12 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
             jumped = false;
 
             animator.SetBool("jumped", false);
+        }
+        canClimb = false;
+        if (mainCollider.IsTouchingLayers(LayerMask.GetMask("Climbable")))
+        {
+            //Debug.DrawLine(groundCheckPos, new Vector3(), Color.blue);
+            canClimb = true;
         }
 
         /*if (colliders.Length > 0)
@@ -185,14 +193,5 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
         Debug.DrawLine(transform.position, transform.position + new Vector3(rb.velocity.x, rb.velocity.y, 0)/10, Color.blue);
         //Debug.DrawLine(bottomleft, bottomleft + new Vector3(0, mainCollider.size.y, 0), isGrounded ? Color.green : Color.red);
         //Debug.DrawLine(bottomleft, bottomleft + new Vector3(mainCollider.size.x, 0, 0), isGrounded ? Color.green : Color.red);
-    }
-
-    public void PlayerClimbingMessage(bool setCanClimb)
-    {
-        canClimb = setCanClimb;
-        if (!canClimb)
-        {
-            isClimbing = false;
-        }
     }
 }
