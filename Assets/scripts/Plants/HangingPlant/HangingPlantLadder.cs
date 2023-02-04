@@ -5,7 +5,9 @@ namespace DefaultNamespace.Plants
     public class HangingPlantLadder : MonoBehaviour, InteractionEvent, TogglePlantAliveEvent
     {
 
-        private bool isAlive = false; 
+        private bool isAlive = false;
+
+        public Sprite aliveSprite;
         
         public void InteractMessage()
         {
@@ -23,7 +25,7 @@ namespace DefaultNamespace.Plants
         public void TogglePlantAliveMessage()
         {
             isAlive = true;
-            
+            this.GetComponent<SpriteRenderer>().sprite = aliveSprite;
             Debug.Log("HaningPlantisAlive");
         }
     }

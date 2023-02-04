@@ -28,9 +28,6 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     public void SendWaterMessage()
     {
         hasWater = true;
-
-        ChangeSprite(1);
-
     }
 
     void Update()
@@ -77,7 +74,7 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     protected virtual void becomeAlive()
     {
         initializeOxygen();
-        
+        ChangeSprite(1);
     }
     
     

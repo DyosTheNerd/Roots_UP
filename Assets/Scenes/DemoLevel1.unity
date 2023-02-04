@@ -6089,6 +6089,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 315095046, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 1511059489, guid: bc6d391ce927c36428aa80f07fa7eddb, type: 3}
+    - target: {fileID: 1405913552, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+      propertyPath: plantSpriteList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405913552, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+      propertyPath: plantSpriteList.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
+    - target: {fileID: 1405913552, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+      propertyPath: plantSpriteList.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8dd98f454face79458609d592fa4e077, type: 3}
     - target: {fileID: 9176650173917494603, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -6576,7 +6592,7 @@ PrefabInstance:
     - target: {fileID: 5472285091119443587, guid: ca0481dc3d3d31542a3f9fa6c3dfc390, type: 3}
       propertyPath: connectedObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1651776674}
     - target: {fileID: 5472285091119443589, guid: ca0481dc3d3d31542a3f9fa6c3dfc390, type: 3}
       propertyPath: m_Name
       value: ValvePrototype (1)
@@ -6784,6 +6800,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1651776674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9176650173917494966, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+  m_PrefabInstance: {fileID: 1051674337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1883092835
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8415656dfd2947cea66299169f93d7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aliveSprite: {fileID: 1511059489, guid: bc6d391ce927c36428aa80f07fa7eddb, type: 3}
 --- !u!1001 &7705920813234842025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,11 +128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940384994, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.42
+      value: -33.6485
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940384994, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.13
+      value: 11.111038
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940384994, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_LocalPosition.z
@@ -167,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940385567, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_Name
-      value: HangingPlantPrototype
+      value: HangingPlantPrototype 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1561320325940385564, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
@@ -210,7 +211,9 @@ MonoBehaviour:
   isAlive: 0
   regenRate: 6
   hasWater: 0
-  plantSpriteList: []
+  plantSpriteList:
+  - {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
+  - {fileID: 21300000, guid: 8dd98f454face79458609d592fa4e077, type: 3}
   plantAliveObject: {fileID: 454212347319505929}
 --- !u!1 &9176650175399709603 stripped
 GameObject:
