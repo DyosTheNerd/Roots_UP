@@ -8,36 +8,55 @@ public class PlayerUseInteractionSystem : MonoBehaviour
 
     private bool isInteracting = false;
 
+    private GameObject interationObject;
+    
     public Animator animator;
 
     private void OnCollisionStay2D(Collision2D other)
     {
         if (isInteracting)
         {
-            Debug.Log("interating");
-            ExecuteEvents.Execute<InteractionEvent>(other.gameObject, null, (x, y) => x.InteractMessage());
+            startInteraction(other);
         }
     }
 
-    void Start()
+    private void OnCollisionExit(Collision other)
     {
+        if (isInteracting)
+        {
+            stopInteraction();
+        }
+    }
+
+    void startInteraction(Collision2D other)
+    {
+        interationObject = other.gameObject;
+        ExecuteEvents.Execute<InteractionEvent>(other.gameObject, null, (x, y) => x.InteractMessage());
+    }
+
+    void stopInteraction()
+    {
+        if (interationObject)
+        {
+            animator.SetBool("do", false);
+            isInteracting = false;
+            ExecuteEvents.Execute<InteractionEvent>(interationObject, null, (x, y) => x.StopInteractMessage());    
+        }
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            isInteracting = true;
+           isInteracting = true;
 
-           // animator.SetBool("do", true);
+           animator.SetBool("do", true);
         }
 
-        else
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            isInteracting = false;
-           // animator.SetBool("do", false);
+            stopInteraction();
         }
     }
 }

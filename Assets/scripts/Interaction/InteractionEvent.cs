@@ -7,5 +7,7 @@ namespace DefaultNamespace
 
         void InteractMessage();
 
+        void StopInteractMessage();
+
     }
 }
