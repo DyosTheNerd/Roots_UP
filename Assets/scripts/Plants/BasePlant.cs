@@ -3,6 +3,8 @@ using DefaultNamespace;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace.Plants;
+using UnityEngine.EventSystems;
 
 public class BasePlant : MonoBehaviour, SendWaterEvent
 {
@@ -68,10 +70,17 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
         if (currentLife >= maxLife)
         {
             isAlive = true;
-            initializeOxygen();
+            becomeAlive();
         }
     }
 
+    protected virtual void becomeAlive()
+    {
+        initializeOxygen();
+        
+    }
+    
+    
     private void initializeOxygen()
     {
         oxygenZone.gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
