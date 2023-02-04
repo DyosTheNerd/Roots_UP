@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="1290.5089"
-     inkscape:cy="151.37356"
+     inkscape:zoom="3.959798"
+     inkscape:cx="923.72958"
+     inkscape:cy="511.42973"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -329,6 +329,11 @@
        x="134.71965"
        y="-131"
        transform="rotate(90)" />
+    <path
+       style="opacity:1;fill:#533011;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 81.659852,97.021462 a 0.13838273,0.22901899 0 0 0 -0.06027,0.02301 0.16182202,0.19584649 40.292203 0 0 -0.09706,0.01956 0.16182202,0.19584649 40.292203 0 0 -0.125503,0.209778 0.37927039,0.45901526 40.2922 0 0 -0.260759,0.566891 0.37927039,0.45901526 40.2922 0 0 0.118352,0.167047 0.37490729,0.22810716 84.892838 0 0 -0.01091,0.217457 0.37490729,0.22810716 84.892838 0 0 0.1633,0.301998 0.20040226,0.50045747 5.2041454 0 0 0.171652,0.127433 0.1601549,0.62622385 0 0 0 0.118352,0.206187 0.1601549,0.62622385 0 0 0 0.160314,-0.626224 0.1601549,0.62622385 0 0 0 -1.99e-4,-0.0113 0.32433456,0.5367633 0 0 0 0.251014,-0.521956 0.32433456,0.5367633 0 0 0 -0.299347,-0.534797 0.13838273,0.22901899 0 0 0 -0.128888,-0.145124 z"
+       id="path1289"
+       inkscape:connector-curvature="0" />
     <circle
        style="opacity:1;fill:#2b3339;fill-opacity:1;fill-rule:nonzero;stroke:#020302;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
        id="path955"
