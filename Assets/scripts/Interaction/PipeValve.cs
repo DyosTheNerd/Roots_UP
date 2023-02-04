@@ -17,6 +17,14 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
 
     public Sprite activeSprite;
 
+    void Start()
+    {
+        for (int i = 0; i < connectedObjects.Length; i++)
+        {
+            Debug.DrawLine(this.transform.position, connectedObjects[i].transform.position, Color.magenta, 10000000);
+        }
+    }
+
     /**
      * Event when a player changes the Valves state.
      */
@@ -62,4 +70,5 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
     {
         this.gameObject.GetComponent<SpriteRenderer>().sprite = activeSprite;
     }
+
 }
