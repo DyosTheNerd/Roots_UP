@@ -8,6 +8,8 @@ public class PlayerUseInteractionSystem : MonoBehaviour
 
     private bool isInteracting = false;
 
+    public Animator animator;
+
 
     private void OnCollisionStay2D(Collision2D other)
     {
@@ -29,11 +31,14 @@ public class PlayerUseInteractionSystem : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             isInteracting = true;
+
+            animator.SetBool("do", true);
         }
 
         else
         {
             isInteracting = false;
+            animator.SetBool("do", false);
         }
     }
 }

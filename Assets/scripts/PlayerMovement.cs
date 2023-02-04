@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private const float _gravityscale = 2;
 
+    public Animator animator;
+
 
     private PlayerStatus _playerStatus;
 
@@ -48,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     float timeelapsed = 0;
     float sincejump = 0;
     bool jumped = false;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -101,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
             jumpdebounce = false;
             timeelapsed = 0;
         }
+
+        animator.SetInteger("run", movedirection);
 
     }
 
