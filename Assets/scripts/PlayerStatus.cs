@@ -5,7 +5,7 @@ namespace DefaultNamespace
     public class PlayerStatus : MonoBehaviour, PlayerDyingEvent
     {
 
-        private bool isDead = false;
+        public bool isDead = false;
         private bool canMove = true;
 
         public Animator animator;

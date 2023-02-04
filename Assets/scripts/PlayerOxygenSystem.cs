@@ -85,7 +85,7 @@ public class PlayerOxygenSystem : MonoBehaviour
     void checkAndActIfDead()
     {
         
-        if (currentO2 == 0 && !playerStatus.IsDead)
+        if (currentO2 <= 0 && !playerStatus.IsDead)
         {
             ExecuteEvents.Execute<PlayerDyingEvent>(playerCharacter, null, (x, y) => x.DyingMessage("oxygen"));
         }
