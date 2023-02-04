@@ -107,6 +107,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetInteger("run", movedirection);
+        animator.SetBool("jumped", jumpdebounce);
+        
 
     }
 
