@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
         if (!Input.GetKey(KeyCode.W))
         {
             sincejump = 0;
+            animator.SetBool("jumped", true);
         }
         gravityscale = _gravityscale;
         if (Input.GetKey(KeyCode.S))
@@ -116,7 +117,8 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
             timeelapsed = 0;
         }
 
-//        animator.SetInteger("run", movedirection);
+        animator.SetInteger("run", movedirection);
+        
 
     }
 
@@ -163,6 +165,8 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
             //Debug.DrawLine(groundCheckPos, new Vector3(), Color.blue);
             isGrounded = true;
             jumped = false;
+
+            animator.SetBool("jumped", false);
         }
 
         /*if (colliders.Length > 0)
