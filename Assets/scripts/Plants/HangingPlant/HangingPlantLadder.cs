@@ -13,10 +13,7 @@ namespace DefaultNamespace.Plants
         void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            if (climbable)
-            {
-                spriteRenderer.enabled = true;
-            }
+            spriteRenderer.enabled = climbable;
         }
 
         public void activate()

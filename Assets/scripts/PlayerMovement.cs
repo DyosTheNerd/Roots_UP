@@ -62,9 +62,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
+        movedirection = 0;
+        isClimbing = false;
+        gravityscale = _gravityscale;
         if (_playerStatus.isDead == false)
         {
-            movedirection = 0;
             if (Input.GetKey(KeyCode.D))
             {
                 movedirection += 1;
@@ -89,7 +91,6 @@ public class PlayerMovement : MonoBehaviour
                 isGrounded = false;
                 jumped = true;
             }
-            isClimbing = false;
             if (Input.GetKey(KeyCode.W) && canClimb)
             {
                 isClimbing = true;
@@ -103,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
                 sincejump = 0;
                 animator.SetBool("jumped", true);
             }
-            gravityscale = _gravityscale;
+            
             if (Input.GetKey(KeyCode.S))
             {
                 gravityscale = 10;
