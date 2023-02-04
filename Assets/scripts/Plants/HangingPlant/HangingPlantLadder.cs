@@ -16,14 +16,23 @@ namespace DefaultNamespace.Plants
         {
             if (isAlive)
             {
-                setPlayerClimbing();
+                setPlayerClimbing(true);
             }
         }
 
-        private void setPlayerClimbing()
+        public void StopInteractMessage()
+        {
+            if (isAlive)
+            {
+                setPlayerClimbing(false);
+                
+            }
+        }
+
+        private void setPlayerClimbing(bool isClimbing)
         {
             
-            ExecuteEvents.Execute<PlayerClimbingEvent>(PlayerSingletonProvider.getPlayerGameObject(), null, (x, y) => x.PlayerClimbingMessage());        
+            ExecuteEvents.Execute<PlayerClimbingEvent>(PlayerSingletonProvider.getPlayerGameObject(), null, (x, y) => x.PlayerClimbingMessage(isClimbing));        
         }
 
         public void TogglePlantAliveMessage()

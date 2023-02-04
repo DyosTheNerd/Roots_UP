@@ -4,6 +4,6 @@ namespace DefaultNamespace.Player
 {
     public interface PlayerClimbingEvent : IEventSystemHandler
     {
-        void PlayerClimbingMessage();
+        void PlayerClimbingMessage(bool isClimbing);
     }
 }

@@ -14,5 +14,10 @@ namespace DefaultNamespace
         {
             
         }
+
+        public void StopInteractMessage()
+        {
+            
+        }
     }
 }

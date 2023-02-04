@@ -6,10 +6,14 @@ namespace DefaultNamespace
     {
         public void InteractMessage()
         {
-            Debug.Log("direct interaction");
-            this.ConsumeInteraction();
+            ConsumeInteraction();
         }
 
         public abstract void ConsumeInteraction();
+
+        public void StopInteractMessage()
+        {
+            //
+        }
     }
 }
