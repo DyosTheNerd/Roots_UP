@@ -124,7 +124,7 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: jumped
-    m_Type: 1
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -241,7 +241,7 @@ AnimatorStateMachine:
     m_Position: {x: 370, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1418818316693015190}
-    m_Position: {x: 370, y: -50, z: 0}
+    m_Position: {x: 400, y: -50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -2066799249511934145}
@@ -314,7 +314,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 2
     m_ConditionEvent: jumped
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
