@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int acceleration = 100;
     public int maxspeed = 30;
-    public float jumppower = 15;
+    public float jumppower = 20;
     public float gravityscale;
     public float jumptimer = .4f;
 
