@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 32123
+  controlID: 32990
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 32081
+  controlID: 32946
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 32058
+  controlID: 32922
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,8 +191,8 @@ MonoBehaviour:
     y: 0
     width: 270.4
     height: 465.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -236,7 +236,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fea1ffff90a2ffff60b7ffff88beffff90d4ffff9ad5ffff3ad7ffff94d8ffffa0dcffff46e4ffff48ebffffb8ebffff70f5ffff0cf6ffffaafaffffee60000088680000a4680000a8680000c0680000
+      m_ExpandedIDs: e6f1fefffea1ffff90a2ffff60b7ffff88beffff90d4ffff9ad5ffff3ad7ffff94d8ffffa0dcffff46e4ffff48ebffffb8ebffff70f5ffff0cf6ffffaafaffffee60000088680000a4680000a8680000c0680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -774,8 +774,8 @@ MonoBehaviour:
     y: 465.6
     width: 1112
     height: 265.19998
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -828,22 +828,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\alexa\Desktop\Gamedev\Rootsup
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 27.800018}
-    m_SelectedIDs: ac600000
-    m_LastClickedID: 24748
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d0600000
+    m_LastClickedID: 24784
     m_ExpandedIDs: 00000000ac600000d460000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -897,8 +897,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: be5f0000
+    m_LastClickedInstanceID: 24510
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000587000000000000074610000
     m_RenameOverlay:
@@ -980,8 +980,8 @@ MonoBehaviour:
     y: 0
     width: 424
     height: 730.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 24510
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
