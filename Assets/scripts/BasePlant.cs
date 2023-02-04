@@ -1,6 +1,8 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class BasePlant : MonoBehaviour, SendWaterEvent
 {
@@ -13,14 +15,18 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     public int currentLife = 0;
 
     public bool isAlive = false;
-    
+
+    public List<Sprite> plantSpriteList = new List<Sprite>();
+
     public int regenRate = 6;
 
     public bool hasWater = false;
 
+
     public void SendWaterMessage()
     {
         hasWater = true;
+        
     }
 
     void Update()
