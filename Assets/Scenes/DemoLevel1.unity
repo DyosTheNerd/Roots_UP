@@ -5002,10 +5002,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a0667497db8f148b774d629c84c30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  jumppower: 10
-  gravityscale: 2
-  jumptimer: 0.5
+  acceleration: 100
+  maxspeed: 30
+  jumppower: 30
+  gravityscale: 0
+  jumptimer: 0.4
 --- !u!50 &528225047
 Rigidbody2D:
   serializedVersion: 4
