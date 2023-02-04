@@ -1,5 +1,7 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerOxygenSystem : MonoBehaviour
 {
@@ -14,6 +16,21 @@ public class PlayerOxygenSystem : MonoBehaviour
     
     private int currentO2 = 1000;
 
+    public GameObject playerCharacter;
+
+    private PlayerStatus playerStatus;
+    
+    public void Start()
+    {
+        playerStatus = playerCharacter.GetComponent<PlayerStatus>();
+
+        if (playerStatus == null)
+        {
+            Debug.Log("Setup Error: Player Status undefined");
+        }
+        
+    }
+    
     public int getCurrentO2()
     {
         return currentO2;
@@ -37,7 +54,6 @@ public class PlayerOxygenSystem : MonoBehaviour
         }
     }
 
-
     bool canLooseOxygen()
     {
         return currentO2 > 0;
@@ -47,11 +63,6 @@ public class PlayerOxygenSystem : MonoBehaviour
     {
         
         return oxygenCollisions > 0;
-    }
-    
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -68,6 +79,17 @@ public class PlayerOxygenSystem : MonoBehaviour
             currentO2 += rechargePerTick;
             currentO2 = Math.Min(currentO2, maxO2);
         }
+
+        checkAndActIfDead();
+    }
+
+    void checkAndActIfDead()
+    {
         
+        if (currentO2 == 0 && !playerStatus.IsDead)
+        {
+            Debug.Log("dying");
+            ExecuteEvents.Execute<PlayerDyingEvent>(playerCharacter, null, (x, y) => x.DyingMessage("oxygen"));
+        }
     }
 }

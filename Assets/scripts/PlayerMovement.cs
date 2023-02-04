@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D capsuleCollider;
 
 
+    private PlayerStatus _playerStatus;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
         mainCollider = GetComponent<BoxCollider2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         rb.gravityScale = gravityscale;
+
+
+        _playerStatus = this.gameObject.GetComponent<PlayerStatus>();
     }
 
     int movedirection = 0;
@@ -34,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!_playerStatus.CanMove)
+        {
+            return;
+        }
+        
         bool jump = false;
         movedirection = 0;
         if (Input.GetKey(KeyCode.D) )
@@ -97,4 +108,5 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawLine(bottomleft, bottomleft + new Vector3(0, mainCollider.size.y, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(bottomleft, bottomleft + new Vector3(mainCollider.size.x, 0, 0), isGrounded ? Color.green : Color.red);
     }
+
 }
