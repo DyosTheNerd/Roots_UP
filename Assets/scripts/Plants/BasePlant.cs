@@ -10,7 +10,8 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     public int oxygenProductionThreshold = 80;
 
     public GameObject oxygenZone;
-        
+    public GameObject particleeffect;
+
     public int currentLife = 0;
 
     public bool isAlive = false;
@@ -79,6 +80,7 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     {
         oxygenZone.gameObject.layer = LayerMask.NameToLayer("Atmosphere");
         oxygenZone.gameObject.tag = "OxygenSource";
+        particleeffect.SetActive(true);
     }
     
 }
