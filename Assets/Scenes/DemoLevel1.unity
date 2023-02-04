@@ -6102,13 +6102,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1051674342, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051674342, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
+    - target: {fileID: 1051674339, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 9176650173917494603, guid: 2feb5d09e961eba42a250ff213c418bc, type: 3}
       propertyPath: m_RootOrder
@@ -6440,6 +6436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygenCollisions: 0
+  maxO2: 1000
+  lossPerSecond: 60
+  rechargePerSecond: 300
   playerCharacter: {fileID: 528225042}
 --- !u!212 &1410597832
 SpriteRenderer:
