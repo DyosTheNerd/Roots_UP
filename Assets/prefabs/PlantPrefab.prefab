@@ -160,13 +160,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561320325940385567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.52, y: -11.27, z: -0.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.52, y: -10.2, z: -0.2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1561320324201390601}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1561320325940385565
 SpriteRenderer:
@@ -209,8 +209,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4433962, g: 0.2692656, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -237,5 +237,8 @@ MonoBehaviour:
   oxygenZone: {fileID: 1561320324201390602}
   currentLife: 0
   isAlive: 0
+  plantSpriteList:
+  - {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
+  - {fileID: 21300000, guid: 8dd98f454face79458609d592fa4e077, type: 3}
   regenRate: 6
   hasWater: 0
