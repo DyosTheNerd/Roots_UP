@@ -64,60 +64,61 @@ public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
         }
 
         //transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
+        if (_playerStatus.isDead == false)
+        {
+            movedirection = 0;
+            if (Input.GetKey(KeyCode.D))
+            {
+                movedirection += 1;
+            }
 
+            if (Input.GetKey(KeyCode.A))
+            {
+                movedirection -= 1;
+            }
 
-        movedirection = 0;
-        if (Input.GetKey(KeyCode.D))
-        {
-            movedirection += 1;
-        }
+            if (movedirection != 0)
+            {
+                facingright = movedirection == 1 ? true : false;
+                spriteRenderer.flipX = facingright;
+            }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            movedirection -= 1;
-        }
+            if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce && !canClimb)
+            {
+                jumpdebounce = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumppower);
+                //rb.AddForce(new Vector2(0, jumppower));
+                isGrounded = false;
+                jumped = true;
+            }
+            if (Input.GetKey(KeyCode.W) && canClimb)
+            {
+                isClimbing = true;
+            }
+            if (jumped)
+            {
+                sincejump += Time.deltaTime;
+            }
+            if (!Input.GetKey(KeyCode.W))
+            {
+                sincejump = 0;
+                animator.SetBool("jumped", true);
+            }
+            gravityscale = _gravityscale;
+            if (Input.GetKey(KeyCode.S))
+            {
+                gravityscale = 10;
+            }
 
-        if (movedirection != 0)
-        {
-            facingright = movedirection == 1 ? true : false;
-            spriteRenderer.flipX = facingright;
-        }
+            timeelapsed += Time.deltaTime;
+            if (timeelapsed >= jumptimer)
+            {
+                jumpdebounce = false;
+                timeelapsed = 0;
+            }
 
-        if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce && !canClimb)
-        {
-            jumpdebounce = true;
-            rb.velocity = new Vector2(rb.velocity.x, jumppower);
-            //rb.AddForce(new Vector2(0, jumppower));
-            isGrounded = false;
-            jumped = true;
+            animator.SetInteger("run", movedirection);
         }
-        if (Input.GetKey(KeyCode.W) && canClimb)
-        {
-            isClimbing = true;
-        }
-        if (jumped)
-        {
-            sincejump += Time.deltaTime;
-        }
-        if (!Input.GetKey(KeyCode.W))
-        {
-            sincejump = 0;
-            animator.SetBool("jumped", true);
-        }
-        gravityscale = _gravityscale;
-        if (Input.GetKey(KeyCode.S))
-        {
-            gravityscale = 10;
-        }
-       
-        timeelapsed += Time.deltaTime;
-        if (timeelapsed >= jumptimer)
-        {
-            jumpdebounce = false;
-            timeelapsed = 0;
-        }
-
-        animator.SetInteger("run", movedirection);
         
 
     }

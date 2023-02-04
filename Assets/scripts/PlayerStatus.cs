@@ -5,8 +5,10 @@ namespace DefaultNamespace
     public class PlayerStatus : MonoBehaviour, PlayerDyingEvent
     {
 
-        private bool isDead = false;
+        public bool isDead = false;
         private bool canMove = true;
+
+        public Animator animator;
 
         public bool IsDead
         {
@@ -23,6 +25,9 @@ namespace DefaultNamespace
             Debug.Log("dead");
 
             isDead = true;
+
+            animator.SetBool("dead", isDead);
+
             canMove = false;
         }
     }
