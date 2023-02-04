@@ -80,7 +80,6 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     
     private void initializeOxygen()
     {
-        oxygenZone.gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
         oxygenZone.gameObject.layer = LayerMask.NameToLayer("Atmosphere");
         oxygenZone.gameObject.tag = "OxygenSource";
     }
