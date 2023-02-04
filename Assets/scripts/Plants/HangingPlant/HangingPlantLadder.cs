@@ -1,4 +1,6 @@
+using DefaultNamespace.Player;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace DefaultNamespace.Plants
 {
@@ -8,25 +10,26 @@ namespace DefaultNamespace.Plants
         private bool isAlive = false;
 
         public Sprite aliveSprite;
+
         
         public void InteractMessage()
         {
             if (isAlive)
             {
-                disablePlayerGravity();
+                setPlayerClimbing();
             }
         }
 
-        private void disablePlayerGravity()
+        private void setPlayerClimbing()
         {
-            // TODO
+            
+            ExecuteEvents.Execute<PlayerClimbingEvent>(PlayerSingletonProvider.getPlayerGameObject(), null, (x, y) => x.PlayerClimbingMessage());        
         }
 
         public void TogglePlantAliveMessage()
         {
             isAlive = true;
-            this.GetComponent<SpriteRenderer>().sprite = aliveSprite;
-            Debug.Log("HaningPlantisAlive");
+            GetComponent<SpriteRenderer>().sprite = aliveSprite;
         }
     }
 }

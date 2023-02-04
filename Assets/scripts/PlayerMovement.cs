@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
+using DefaultNamespace.Player;
 using UnityEditor.UI;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
 {
 
     public int acceleration = 100;
@@ -51,7 +52,9 @@ public class PlayerMovement : MonoBehaviour
     float sincejump = 0;
     bool jumped = false;
 
-
+    private bool canClimb = false;
+    private bool isClimbing = false;
+    
     // Update is called once per frame
     void Update()
     {
@@ -61,29 +64,36 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
-        
-        
+
+
         movedirection = 0;
         if (Input.GetKey(KeyCode.D))
         {
             movedirection += 1;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             movedirection -= 1;
         }
+
         if (movedirection != 0)
         {
             facingright = movedirection == 1 ? true : false;
             spriteRenderer.flipX = facingright;
         }
-        if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce)
+
+        if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce && !canClimb)
         {
             jumpdebounce = true;
             rb.velocity = new Vector2(rb.velocity.x, jumppower);
             //rb.AddForce(new Vector2(0, jumppower));
             isGrounded = false;
             jumped = true;
+        }
+        if (Input.GetKey(KeyCode.W) && canClimb)
+        {
+            isClimbing = true;
         }
         if (jumped)
         {
@@ -133,6 +143,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, 10 * dt), ForceMode2D.Impulse);
         }
+
+        if (isClimbing)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 1);
+        }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
 
 
@@ -170,4 +185,8 @@ public class PlayerMovement : MonoBehaviour
         //Debug.DrawLine(bottomleft, bottomleft + new Vector3(mainCollider.size.x, 0, 0), isGrounded ? Color.green : Color.red);
     }
 
+    public void PlayerClimbingMessage()
+    {
+        isClimbing = true; 
+    }
 }
