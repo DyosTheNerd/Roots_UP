@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     BoxCollider2D mainCollider;
     CapsuleCollider2D capsuleCollider;
+    SpriteRenderer spriteRenderer;
 
     private const float _gravityscale = 2;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
         mainCollider = GetComponent<BoxCollider2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb.gravityScale = gravityscale;
 
 
@@ -54,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
             //return;
         }
 
-        transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
+        //transform.localScale = new Vector3(facingright ? 1 : -1, 1, 1);
+        
         
         movedirection = 0;
         if (Input.GetKey(KeyCode.D))
@@ -64,6 +67,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             movedirection -= 1;
+        }
+        if (movedirection != 0)
+        {
+            facingright = movedirection == 1 ? true : false;
+            spriteRenderer.flipX = facingright;
         }
         if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce)
         {
@@ -152,8 +160,8 @@ public class PlayerMovement : MonoBehaviour
         // Simple debug
         //Debug.LogFormat("The current speed is {0}", rb.velocity.x);
         Debug.DrawLine(transform.position, transform.position + new Vector3(rb.velocity.x, rb.velocity.y, 0)/10, Color.blue);
-        Debug.DrawLine(bottomleft, bottomleft + new Vector3(0, mainCollider.size.y, 0), isGrounded ? Color.green : Color.red);
-        Debug.DrawLine(bottomleft, bottomleft + new Vector3(mainCollider.size.x, 0, 0), isGrounded ? Color.green : Color.red);
+        //Debug.DrawLine(bottomleft, bottomleft + new Vector3(0, mainCollider.size.y, 0), isGrounded ? Color.green : Color.red);
+        //Debug.DrawLine(bottomleft, bottomleft + new Vector3(mainCollider.size.x, 0, 0), isGrounded ? Color.green : Color.red);
     }
 
 }
