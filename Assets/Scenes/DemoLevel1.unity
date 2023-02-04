@@ -6364,7 +6364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf37fdbbe1381cc43943d05d177ca291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
+  hasWater: 1
+  isOpen: 0
+  connectedObjects:
+  - {fileID: 1594924541}
 --- !u!212 &1367781429
 SpriteRenderer:
   m_ObjectHideFlags: 0

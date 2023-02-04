@@ -4,9 +4,9 @@ using UnityEngine.EventSystems;
 
 public class PipeValve : AbstractDirectInteractable, SendWaterEvent
 {
-    private bool hasWater = false;
+    public bool hasWater = false;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
 
     private bool isForwardingWater = false;
     
