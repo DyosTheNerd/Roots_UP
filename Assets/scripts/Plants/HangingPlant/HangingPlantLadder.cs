@@ -4,41 +4,34 @@ using UnityEngine.EventSystems;
 
 namespace DefaultNamespace.Plants
 {
-    public class HangingPlantLadder : MonoBehaviour, InteractionEvent, TogglePlantAliveEvent
+    public class HangingPlantLadder : MonoBehaviour
     {
 
-        private bool isAlive = false;
+        public bool climbable = false;
+        SpriteRenderer spriteRenderer;
 
-        public Sprite aliveSprite;
-
-        
-        public void InteractMessage()
+        void Start()
         {
-            if (isAlive)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            if (climbable)
             {
-                setPlayerClimbing(true);
+                spriteRenderer.enabled = true;
             }
         }
 
-        public void StopInteractMessage()
+        public void activate()
         {
-            if (isAlive)
-            {
-                setPlayerClimbing(false);
-                
-            }
+            spriteRenderer.enabled = true;
+            climbable = true;
         }
 
-        private void setPlayerClimbing(bool isClimbing)
+        public void deactivate()
         {
-            
-            ExecuteEvents.Execute<PlayerClimbingEvent>(PlayerSingletonProvider.getPlayerGameObject(), null, (x, y) => x.PlayerClimbingMessage(isClimbing));        
+            spriteRenderer.enabled = false;
+            climbable = false;
         }
 
-        public void TogglePlantAliveMessage()
-        {
-            isAlive = true;
-            GetComponent<SpriteRenderer>().sprite = aliveSprite;
-        }
     }
+
+    
 }
