@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
             timeelapsed = 0;
         }
 
-        animator.SetInteger("run", movedirection);
+//        animator.SetInteger("run", movedirection);
 
     }
 
