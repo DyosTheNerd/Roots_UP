@@ -88,7 +88,6 @@ public class PlayerOxygenSystem : MonoBehaviour
         
         if (currentO2 == 0 && !playerStatus.IsDead)
         {
-            Debug.Log("dying");
             ExecuteEvents.Execute<PlayerDyingEvent>(playerCharacter, null, (x, y) => x.DyingMessage("oxygen"));
         }
     }

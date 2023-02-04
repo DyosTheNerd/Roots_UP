@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public abstract  class BaseInteractable : MonoBehaviour
+    public interface BaseInteractable
     {
         public abstract void interact();
     }

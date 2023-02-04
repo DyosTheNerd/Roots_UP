@@ -1,6 +1,7 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerUseInteractionSystem : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class PlayerUseInteractionSystem : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        Debug.Log("collides");
         if (isInteracting)
         {
-            other.gameObject.GetComponent<BaseInteractable>().interact();
+            Debug.Log("interating");
+            ExecuteEvents.Execute<InteractionEvent>(other.gameObject, null, (x, y) => x.InteractMessage());
         }
     }
 
@@ -28,7 +29,6 @@ public class PlayerUseInteractionSystem : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             isInteracting = true;
-            Debug.Log("interacting");
         }
 
         else

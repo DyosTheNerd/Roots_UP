@@ -2,7 +2,7 @@ using System;
 using DefaultNamespace;
 using UnityEngine;
 
-public class BasePlant : BaseInteractable
+public class BasePlant : MonoBehaviour, SendWaterEvent
 {
     
     public int maxLife = 100;
@@ -16,14 +16,21 @@ public class BasePlant : BaseInteractable
     
     public int regenRate = 6;
 
-    void Start()
-    {
-        
-    }
+    public bool hasWater = false;
 
+    public void SendWaterMessage()
+    {
+        hasWater = true;
+    }
 
     void Update()
     {
+        if (hasWater)
+        {
+            regenLife();
+        }
+        
+        
         if (!isAlive)
         {
             checkBecomeAlive();
@@ -31,11 +38,8 @@ public class BasePlant : BaseInteractable
         
 
     }
-
-    public override void interact()
-    {
-        regenLife();
-    }
+    
+    
 
     private void regenLife()
     {
