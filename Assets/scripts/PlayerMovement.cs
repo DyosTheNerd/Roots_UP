@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (!Input.GetKey(KeyCode.W))
         {
             sincejump = 0;
+            animator.SetBool("jumped", true);
         }
         gravityscale = _gravityscale;
         if (Input.GetKey(KeyCode.S))
@@ -107,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetInteger("run", movedirection);
-        animator.SetBool("jumped", jumpdebounce);
         
 
     }
@@ -150,6 +150,8 @@ public class PlayerMovement : MonoBehaviour
             //Debug.DrawLine(groundCheckPos, new Vector3(), Color.blue);
             isGrounded = true;
             jumped = false;
+
+            animator.SetBool("jumped", false);
         }
 
         /*if (colliders.Length > 0)
