@@ -106,7 +106,13 @@ public class PlayerMovement : MonoBehaviour
             timeelapsed = 0;
         }
 
+<<<<<<< HEAD
+        animator.SetInteger("run", movedirection);
+        animator.SetBool("jumped", jumpdebounce);
+        
+=======
 //        animator.SetInteger("run", movedirection);
+>>>>>>> a63327a72a1f006bdabcff7ca60e3cc784f14cff
 
     }
 
