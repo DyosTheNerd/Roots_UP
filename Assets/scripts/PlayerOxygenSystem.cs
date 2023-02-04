@@ -8,13 +8,13 @@ public class PlayerOxygenSystem : MonoBehaviour
     
     public int oxygenCollisions = 0;
     
-    private int maxO2 = 1000;
+    public int maxO2 = 1000;
 
-    private int lossPerTick = 1;
+    public int lossPerSecond = 60;
 
-    private int rechargePerTick = 5;
+    public int rechargePerSecond = 5 * 60;
     
-    private int currentO2 = 1000;
+    private float currentO2 = 1000;
 
     public GameObject playerCharacter;
 
@@ -23,7 +23,6 @@ public class PlayerOxygenSystem : MonoBehaviour
     public void Start()
     {
         playerStatus = playerCharacter.GetComponent<PlayerStatus>();
-
         if (playerStatus == null)
         {
             Debug.Log("Setup Error: Player Status undefined");
@@ -31,7 +30,7 @@ public class PlayerOxygenSystem : MonoBehaviour
         
     }
     
-    public int getCurrentO2()
+    public float getCurrentO2()
     {
         return currentO2;
     }
@@ -68,15 +67,15 @@ public class PlayerOxygenSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                
+        float dt = Time.deltaTime;
         if (canLooseOxygen() && !isInsideOxygenSource())
         {
-            currentO2 -= lossPerTick;
+            currentO2 -= lossPerSecond * dt;
         }
 
         if (isInsideOxygenSource())
         {
-            currentO2 += rechargePerTick;
+            currentO2 += rechargePerSecond * dt;
             currentO2 = Math.Min(currentO2, maxO2);
         }
 

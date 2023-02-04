@@ -25,7 +25,7 @@ public class O2Bar : MonoBehaviour
     {
 
         
-        int currentO2 = _oxygenSystem.getCurrentO2();
+        float currentO2 = _oxygenSystem.getCurrentO2();
 
         lifebarVisualizer.transform.localScale = new Vector3(startScale.x * currentO2 / 1000, startScale.y , startScale.z);
         
