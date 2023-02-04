@@ -368,7 +368,7 @@ Transform:
   - {fileID: 7902665982716376333}
   - {fileID: 7902665982865365659}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7902665981964034941
 SpriteRenderer:
@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89ce13214fd4ef28f46d7e2df3aee1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7902665981964034931}
 --- !u!50 &7902665981964034942
 Rigidbody2D:
   serializedVersion: 4

@@ -8,6 +8,8 @@ namespace DefaultNamespace
         private bool isDead = false;
         private bool canMove = true;
 
+        public Animator animator;
+
         public bool IsDead
         {
             get => isDead;
@@ -23,6 +25,9 @@ namespace DefaultNamespace
             Debug.Log("dead");
 
             isDead = true;
+
+            animator.SetBool("dead", isDead);
+
             canMove = false;
         }
     }
