@@ -31,13 +31,13 @@ public class PlayerUseInteractionSystem : MonoBehaviour
         {
             isInteracting = true;
 
-            animator.SetBool("do", true);
+           // animator.SetBool("do", true);
         }
 
         else
         {
             isInteracting = false;
-            animator.SetBool("do", false);
+           // animator.SetBool("do", false);
         }
     }
 }
