@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6391037896761213299
 Transform:
   m_ObjectHideFlags: 0
@@ -5064,6 +5064,7 @@ MonoBehaviour:
   maxLife: 100
   oxygenProductionThreshold: 80
   oxygenZone: {fileID: 1561320324201390602}
+  particleeffect: {fileID: 860648844268591068}
   currentLife: 0
   isAlive: 0
   regenRate: 6
