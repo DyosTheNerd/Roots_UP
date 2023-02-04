@@ -1,4 +1,5 @@
 using DefaultNamespace;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,8 +13,9 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
     
     public GameObject[] connectedObjects;
 
-    private BaseInteractable[] connectedInteracables; 
-    
+    private BaseInteractable[] connectedInteracables;
+
+    public Sprite activeSprite;
 
     /**
      * Event when a player changes the Valves state.
@@ -21,8 +23,8 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
     public override void ConsumeInteraction()
     {
         isOpen = true;
-        Debug.Log("opening valve");
         checkWaterAndForward();
+        updateSprite();
     }
 
     /**
@@ -30,8 +32,6 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
      */
     public void SendWaterMessage()
     {
-        
-        
         hasWater = true;
         checkWaterAndForward();
     }
@@ -56,5 +56,10 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
         {
             ExecuteEvents.Execute<SendWaterEvent>(connectedObjects[i], null, (x, y) => x.SendWaterMessage());    
         }
+    }
+
+    private void updateSprite()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = activeSprite;
     }
 }
