@@ -1,10 +1,7 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace.Plants;
-using UnityEngine.EventSystems;
 
 public class BasePlant : MonoBehaviour, SendWaterEvent
 {

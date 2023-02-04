@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace DefaultNamespace
 {
     public interface BaseInteractable

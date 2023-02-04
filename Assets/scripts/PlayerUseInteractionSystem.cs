@@ -12,18 +12,22 @@ public class PlayerUseInteractionSystem : MonoBehaviour
     
     public Animator animator;
 
-    private void OnCollisionStay2D(Collision2D other)
+    void OnCollisionStay2D(Collision2D other)
     {
-        if (isInteracting)
+        if (isInteracting && interationObject == null)
         {
+            
             startInteraction(other);
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    
+    void OnCollisionExit2D(Collision2D other)
     {
-        if (isInteracting)
+        Debug.Log("collision exit");
+        if (other.gameObject == interationObject)
         {
+            Debug.Log("ending interaction");
             stopInteraction();
         }
     }
@@ -40,7 +44,9 @@ public class PlayerUseInteractionSystem : MonoBehaviour
         {
             animator.SetBool("do", false);
             isInteracting = false;
-            ExecuteEvents.Execute<InteractionEvent>(interationObject, null, (x, y) => x.StopInteractMessage());    
+            
+            ExecuteEvents.Execute<InteractionEvent>(interationObject, null, (x, y) => x.StopInteractMessage());  
+            interationObject = null;
         }
         
     }

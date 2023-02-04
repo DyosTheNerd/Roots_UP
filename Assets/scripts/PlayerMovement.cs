@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using DefaultNamespace;
 using DefaultNamespace.Player;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, PlayerClimbingEvent
