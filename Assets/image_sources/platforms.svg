@@ -28,11 +28,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="793.43536"
-     inkscape:cy="948.70348"
+     inkscape:zoom="2.8"
+     inkscape:cx="66.108825"
+     inkscape:cy="852.70432"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -176,22 +176,25 @@
        id="rect2655-8"
        width="56"
        height="56"
-       x="135"
-       y="1" />
+       x="135.2"
+       y="0.80000001" />
     <rect
        style="opacity:1;fill:#233541;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect2655-8-0"
        width="56"
        height="56"
-       x="135"
+       x="135.2"
        y="58.400002" />
     <rect
-       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.60000014;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect6623"
        width="19.200001"
        height="19.200001"
        x="0"
-       y="19.199999" />
+       y="19.199999"
+       inkscape:export-filename="D:\projects\Roots_UP\Assets\Sprites\rect6623.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
   <g
      inkscape:groupmode="layer"
