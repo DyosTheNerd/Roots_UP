@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="1352.3895"
-     inkscape:cy="887.17053"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="569.93917"
+     inkscape:cy="462.31869"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -58,7 +58,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-35.319655)"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        style="opacity:1;fill:#2b2d39;fill-opacity:1;fill-rule:nonzero;stroke:#020302;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
