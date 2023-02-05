@@ -17,5 +17,8 @@ public class FungoPlant : BasePlant
         canv.transform.GetChild(1).gameObject.SetActive(true);
     }
 
+    protected new void ChangeSprite(int spriteInt)
+    {
+    }
 
 }
