@@ -91939,19 +91939,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8294347869822423838, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
-      propertyPath: soundlib
-      value: 
-      objectReference: {fileID: 7902665981774890407}
-    m_RemovedComponents:
-    - {fileID: 8294347869822423838, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 7902665983126825062, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
---- !u!1 &7902665981774890407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8523504563266519296, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
-  m_PrefabInstance: {fileID: 7902665981774890406}
-  m_PrefabAsset: {fileID: 0}
