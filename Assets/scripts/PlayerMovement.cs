@@ -158,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isClimbing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, climbspeed);
+            rb.velocity = new Vector2(rb.velocity.x, climbspeed); 
         }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
 
