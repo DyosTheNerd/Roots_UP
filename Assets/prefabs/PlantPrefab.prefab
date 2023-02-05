@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6391037896761213299
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.2804022, g: 0.35310066, b: 0.8396226, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -359,7 +359,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.13
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5072,3 +5072,4 @@ MonoBehaviour:
   plantSpriteList:
   - {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
   - {fileID: 21300000, guid: 8dd98f454face79458609d592fa4e077, type: 3}
+  animator: {fileID: 0}
