@@ -74,15 +74,12 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     protected virtual void becomeAlive()
     {
         initializeOxygen();
-        if (!name.Equals("Fungo"))
-        {
-            ChangeSprite(1);
-        }
+        ChangeSprite(1);
 
     }
     
     
-    private void initializeOxygen()
+    protected void initializeOxygen()
     {
         oxygenZone.gameObject.layer = LayerMask.NameToLayer("Atmosphere");
         oxygenZone.gameObject.tag = "OxygenSource";
