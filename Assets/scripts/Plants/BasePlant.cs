@@ -46,10 +46,13 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
 
     }
 
-    private void ChangeSprite(int spriteInt)
+    protected void ChangeSprite(int spriteInt)
     {
-
-        this.GetComponent<SpriteRenderer>().sprite = plantSpriteList[spriteInt];
+        if (!name.Equals("Fungo"))
+        {
+            this.GetComponent<SpriteRenderer>().sprite = plantSpriteList[spriteInt];
+        }
+        
 
     }
 
