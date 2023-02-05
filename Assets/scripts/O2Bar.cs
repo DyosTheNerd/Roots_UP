@@ -1,20 +1,23 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class O2Bar : MonoBehaviour
 {
-    public GameObject lifebarVisualizer;
-
-
+    public RectTransform innerBar;
+    public GameObject percText;
     public GameObject playerObject;
 
-    private Vector3 startScale;
+    private float maxSize;
 
+    private TextMeshProUGUI textcomp;
     private PlayerOxygenSystem _oxygenSystem;
 
     void Start()
     {
+        maxSize = innerBar.sizeDelta.x;
         _oxygenSystem = playerObject.GetComponent<PlayerOxygenSystem>();
-        startScale = lifebarVisualizer.transform.localScale;
+        textcomp = percText.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -23,9 +26,13 @@ public class O2Bar : MonoBehaviour
 
         
         float currentO2 = _oxygenSystem.getCurrentO2();
+        float maxO2 = _oxygenSystem.getMaxO2();
 
-        lifebarVisualizer.transform.localScale = new Vector3(startScale.x * currentO2 / 1000, startScale.y , startScale.z);
-        
+        float percentage = currentO2/maxO2;
+
+        //innerBar = new Vector2(maxSize*percentage, innerBar.localScale.y);
+        innerBar.sizeDelta = new Vector2(maxSize*percentage,innerBar.sizeDelta.y);
+        textcomp.text = string.Format("Oxygen: {0}%", Mathf.CeilToInt(percentage*100));
     }
 
   
