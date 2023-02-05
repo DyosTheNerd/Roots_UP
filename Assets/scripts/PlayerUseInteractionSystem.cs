@@ -40,9 +40,11 @@ public class PlayerUseInteractionSystem : MonoBehaviour
 
     void stopInteraction()
     {
+
+        animator.SetBool("do", false);
+
         if (interationObject)
         {
-            animator.SetBool("do", false);
             isInteracting = false;
             
             ExecuteEvents.Execute<InteractionEvent>(interationObject, null, (x, y) => x.StopInteractMessage());  
