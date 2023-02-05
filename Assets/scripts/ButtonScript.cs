@@ -28,7 +28,11 @@ public class ButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas.SetActive(true);
+        if (!SceneManager.GetActiveScene().name.Equals("01Start"))
+        {
+            canvas.SetActive(true);
+
+        }
 
     }
 
