@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6617570165235883503}
   - component: {fileID: 6617570165235883502}
-  - component: {fileID: 4207750608418577867}
+  - component: {fileID: 7213939153736319590}
   - component: {fileID: 6617570165235883501}
   m_Layer: 0
   m_Name: Fungo
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4207750608418577867
+--- !u!114 &7213939153736319590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6617570165235883500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adc224683bc3954d99e38b2c1a485e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c3aaa2e7d7503f47828d1573dfa64be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxLife: 100
@@ -109,6 +109,7 @@ MonoBehaviour:
   regenRate: 6
   hasWater: 0
   plantSpriteList: []
+  animator: {fileID: 0}
 --- !u!95 &6617570165235883501
 Animator:
   serializedVersion: 5
