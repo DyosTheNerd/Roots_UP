@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
-
+    public GameObject canvas;
     public void respawn()
     { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -28,6 +28,8 @@ public class ButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canvas.SetActive(true);
+
     }
 
     // Update is called once per frame

@@ -33,9 +33,9 @@ public class PipeValve : AbstractDirectInteractable, SendWaterEvent
         isOpen = true;
         checkWaterAndForward();
         updateSprite();
-        AudioSource myAudioSrc =this.gameObject.GetComponent<AudioSource>();
+        /*AudioSource myAudioSrc =this.gameObject.GetComponent<AudioSource>();
         myAudioSrc.enabled = true;
-        myAudioSrc.Play();
+        myAudioSrc.Play();*/
     }
 
     /**
