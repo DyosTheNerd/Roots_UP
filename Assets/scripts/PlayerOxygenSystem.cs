@@ -72,10 +72,6 @@ public class PlayerOxygenSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.O))
-        {
-            currentO2 = 1000000000000;
-        }
         float dt = Time.deltaTime;
         if (canLooseOxygen() && !isInsideOxygenSource())
         {

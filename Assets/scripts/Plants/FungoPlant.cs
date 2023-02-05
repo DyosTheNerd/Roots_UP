@@ -5,20 +5,24 @@ using UnityEngine;
 
 public class FungoPlant : BasePlant
 {
-    protected new void becomeAlive()
+    protected override void becomeAlive()
     {
         initializeOxygen();
-        activatewin();
+
+        StartCoroutine(activatewin());
     }
 
-    private void activatewin()
+    IEnumerator activatewin()
     {
+        yield return new WaitForSeconds(4f);
+        Debug.Log("EobsaBGIoaNIBO");
         GameObject canv = GameObject.Find("Canvas");
-        canv.transform.GetChild(1).gameObject.SetActive(true);
-    }
+        
 
-    protected new void ChangeSprite(int spriteInt)
-    {
+        canv.transform.GetChild(1).gameObject.SetActive(true);
+        //canv.transform.GetChild(2).gameObject.SetActive(true);
+
+
     }
 
 }
