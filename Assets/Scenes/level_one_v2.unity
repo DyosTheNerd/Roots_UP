@@ -1105,7 +1105,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &293575747 stripped
@@ -19418,6 +19418,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de1fe0d717fe2e4ea6537c83cc0478c, type: 3}
+--- !u!1001 &1097298761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3900857833067024129, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_Name
+      value: Skybox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 112.50125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.376392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900857833067024134, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6d114c3b88c8734a83ec1c33c4d6c0f, type: 3}
 --- !u!1001 &1102020620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21337,7 +21398,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1369210387 stripped
@@ -91290,7 +91351,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 14
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -91397,10 +91458,10 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 5
     m_Data: {fileID: 2100098344, guid: 4819b00b946993842b9be19713741a8e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -408399497, guid: 4819b00b946993842b9be19713741a8e, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -408399497, guid: 4819b00b946993842b9be19713741a8e, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -747077588, guid: 4819b00b946993842b9be19713741a8e, type: 3}
   - m_RefCount: 3
@@ -91666,7 +91727,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2131356109
