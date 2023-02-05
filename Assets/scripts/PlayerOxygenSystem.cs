@@ -8,7 +8,7 @@ public class PlayerOxygenSystem : MonoBehaviour
     
     public int oxygenCollisions = 0;
     
-    public int maxO2 = 1000;
+    public float maxO2 = 1000;
 
     public int lossPerSecond = 60;
 
@@ -33,6 +33,11 @@ public class PlayerOxygenSystem : MonoBehaviour
     public float getCurrentO2()
     {
         return currentO2;
+    }
+
+    public float getMaxO2()
+    {
+        return maxO2;
     }
     
     private void OnCollisionEnter2D(Collision2D other)
