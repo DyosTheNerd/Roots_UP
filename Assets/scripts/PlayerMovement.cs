@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce && !canClimb)
             {
-                ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerJumped());
+                //ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerJumped());
                 jumpdebounce = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumppower);
                 //rb.AddForce(new Vector2(0, jumppower));
@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isClimbing)
         {
-            ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerClimbing());
+            //ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerClimbing());
             rb.velocity = new Vector2(rb.velocity.x, climbspeed); 
         }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
