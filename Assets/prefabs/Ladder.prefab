@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8415656dfd2947cea66299169f93d7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbable: 0
+  climbable: 1
 --- !u!61 &8291674167729658458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83,14 +83,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 3}
+    oldSize: {x: 3, y: 9}
     newSize: {x: 0.9583333, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.5, y: 10}
   m_EdgeRadius: 0
 --- !u!212 &4524903801855642150
 SpriteRenderer:
