@@ -64,9 +64,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="385.46004"
-     inkscape:cy="292.03868"
+     inkscape:zoom="1.979899"
+     inkscape:cx="233.00275"
+     inkscape:cy="458.06553"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -3932,7 +3932,7 @@
        height="2.4000001"
        x="42"
        y="-6.7558389"
-       transform="rotate(90)"
+       transform="rotate(90,-0.37791938,-0.37791938)"
        clip-path="url(#clipPath3170)" />
     <g
        id="g3130"
