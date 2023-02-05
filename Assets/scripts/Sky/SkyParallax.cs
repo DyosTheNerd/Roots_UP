@@ -16,7 +16,7 @@ public class SkyParallax : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         Vector3 currentV3 = PlayerSingletonProvider.getPlayerGameObject().transform.position;
         
@@ -29,7 +29,7 @@ public class SkyParallax : MonoBehaviour
 
         lastV3 = currentV3;
 
-    }
+    }*/
 
     private void transformParallax(Vector3 current, Vector3 old)
     {

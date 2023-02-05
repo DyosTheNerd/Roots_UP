@@ -32,6 +32,14 @@ namespace DefaultNamespace
             // Death haha screw ur damn events nobody needs them ~ Luca
             GameObject canv = GameObject.Find("Canvas");
             canv.transform.GetChild(0).gameObject.SetActive(true);
+            
+            AudioSource myAudioSrc = this.gameObject.GetComponent<AudioSource>();   // ab hier änderungen
+            myAudioSrc.enabled = true;
+            myAudioSrc.Play();
+
+            //versuch den sound von main camera auszuschalten
+            AudioSource lohl =  GameObject.Find("Main Camera").GetComponent<AudioSource>();   // ab hier änderungen
+            lohl.enabled = false;
 
 
             canMove = false;

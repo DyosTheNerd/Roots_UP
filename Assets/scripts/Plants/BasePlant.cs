@@ -74,7 +74,11 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     protected virtual void becomeAlive()
     {
         initializeOxygen();
-        ChangeSprite(1);
+        if (!name.Equals("Fungo"))
+        {
+            ChangeSprite(1);
+        }
+
     }
     
     
