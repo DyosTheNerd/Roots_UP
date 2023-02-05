@@ -593,7 +593,7 @@ TextureImporter:
       name: Cosmetic_Grids_23
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 64
         width: 64
         height: 64
@@ -614,7 +614,7 @@ TextureImporter:
       name: Cosmetic_Grids_24
       rect:
         serializedVersion: 2
-        x: 320
+        x: 256
         y: 64
         width: 64
         height: 64
@@ -627,6 +627,27 @@ TextureImporter:
       bones: []
       spriteID: a25ad5a109c2f7e429a49a6bd03b1a8b
       internalID: 55695541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cosmetic_Grids_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb8668c7f3ed1f438548ba923644b2d
+      internalID: -51113073
       vertices: []
       indices: 
       edges: []
@@ -646,6 +667,7 @@ TextureImporter:
       Cosmetic_Grids_13: 520445108
       Cosmetic_Grids_22: -1848386527
       Cosmetic_Grids_20: -204957802
+      Cosmetic_Grids_25: -51113073
       Cosmetic_Grids_15: 59185656
       Cosmetic_Grids_14: 1083215743
       Cosmetic_Grids_10: -747077588
