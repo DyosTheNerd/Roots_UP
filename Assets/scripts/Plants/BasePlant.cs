@@ -22,6 +22,8 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
 
     public List<Sprite> plantSpriteList = new List<Sprite>();
 
+    public Animator animator;
+
 
     public void SendWaterMessage()
     {
@@ -80,7 +82,17 @@ public class BasePlant : MonoBehaviour, SendWaterEvent
     {
         oxygenZone.gameObject.layer = LayerMask.NameToLayer("Atmosphere");
         oxygenZone.gameObject.tag = "OxygenSource";
-        particleeffect.SetActive(true);
+
+        if(this.name == "Fungo")
+        {
+            particleeffect.SetActive(false);
+            animator.SetBool("wakeup", true);
+        }
+        else
+        {
+            particleeffect.SetActive(true);
+        }
+
     }
     
 }
