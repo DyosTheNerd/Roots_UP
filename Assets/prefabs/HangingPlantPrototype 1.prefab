@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8415656dfd2947cea66299169f93d7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aliveSprite: {fileID: 1511059489, guid: bc6d391ce927c36428aa80f07fa7eddb, type: 3}
+  climbable: 0
 --- !u!61 &1051674339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,6 +152,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 860648844268591068, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1561320324201390601, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.363289
@@ -170,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940384994, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1561320325940384994, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
       propertyPath: m_LocalPosition.x
@@ -253,6 +257,7 @@ MonoBehaviour:
   maxLife: 100
   oxygenProductionThreshold: 80
   oxygenZone: {fileID: 9176650175399709603}
+  particleeffect: {fileID: 0}
   currentLife: 0
   isAlive: 0
   regenRate: 6
@@ -260,7 +265,8 @@ MonoBehaviour:
   plantSpriteList:
   - {fileID: 21300000, guid: ae0f121390786f840ac2d7f69608ae64, type: 3}
   - {fileID: 21300000, guid: 8dd98f454face79458609d592fa4e077, type: 3}
-  plantAliveObject: {fileID: 144230870008300904}
+  animator: {fileID: 0}
+  plantstoalive: []
 --- !u!1 &9176650175399709603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1561320324201390602, guid: c5c92a3b98a575b4d919170d886fc445, type: 3}
