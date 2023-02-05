@@ -15115,6 +15115,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6617570165235883500, guid: 0cae1149df7e572489dead61219994a1, type: 3}
   m_PrefabInstance: {fileID: 6617570164334488756}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &914026841 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6617570165235883501, guid: 0cae1149df7e572489dead61219994a1, type: 3}
+  m_PrefabInstance: {fileID: 6617570164334488756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992082508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7902665981964034930, guid: 4569299e24ad528408265c8b4bc1f66e, type: 3}
@@ -17332,7 +17337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1511874762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -86027,6 +86032,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4207750608418577867, guid: 0cae1149df7e572489dead61219994a1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 914026841}
     - target: {fileID: 4207750608418577867, guid: 0cae1149df7e572489dead61219994a1, type: 3}
       propertyPath: oxygenZone
       value: 
