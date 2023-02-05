@@ -8,14 +8,20 @@ public class ButtonScript : MonoBehaviour
 {
 
     public void respawn()
-    {
-        SceneManager.LoadScene("level_one_v2");
+    { 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void quit()
     {
-        Debug.Log("QUITTING");
-        Application.Quit();
+        SceneManager.LoadScene("01Start");
+        //Debug.Log("QUITTING");
+        //Application.Quit();
+    }
+
+    public void backtomenu()
+    {
+        SceneManager.LoadScene("01Start");
     }
 
 
