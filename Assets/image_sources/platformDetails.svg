@@ -20,7 +20,43 @@
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
-     id="defs2" />
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3166">
+      <rect
+         style="opacity:1;fill:#fcfbf1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.19999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect3168"
+         width="19.200001"
+         height="19.200001"
+         x="0"
+         y="96" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3170">
+      <rect
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.19999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect3172"
+         width="19.200001"
+         height="19.200001"
+         x="-8.3446503e-007"
+         y="57.599998"
+         transform="rotate(-90)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3174">
+      <rect
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.19999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect3176"
+         width="19.200001"
+         height="19.200001"
+         x="-4.7683716e-007"
+         y="76.800003"
+         transform="rotate(-90)" />
+    </clipPath>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,9 +64,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="840.08743"
-     inkscape:cy="584.09459"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="385.46004"
+     inkscape:cy="292.03868"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -3880,6 +3916,47 @@
        d="M 832 192 L 832 384 L 846.01953 384 C 851.68474 324.1719 835.929 380.17245 869.01758 328.99609 C 874.31325 320.80556 877.77276 314.32286 880.0625 309.18555 C 878.41951 301.61538 875.87699 301.92383 874.86523 302.5 C 874.25793 303.10795 874.34911 302.79392 874.86523 302.5 C 876.24542 301.11834 881.33672 294.80939 893.99609 271.51562 C 900.92827 258.76014 904.85864 251.04669 907.80273 245.27734 C 903.67134 241.3117 898.23616 236.40512 890.98438 230.31641 C 842.00097 189.18912 865.64088 221.79633 847.86328 192 L 832 192 z "
        transform="scale(0.1)"
        id="rect4265-6-4" />
+    <rect
+       style="display:inline;opacity:1;fill:#232841;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect2661-1-8-8-5"
+       width="69.599998"
+       height="2.4000001"
+       x="49.792377"
+       y="-16.200001"
+       transform="rotate(90)"
+       clip-path="url(#clipPath3174)" />
+    <rect
+       style="display:inline;opacity:1;fill:#232841;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect2661-1-6-3"
+       width="69.599998"
+       height="2.4000001"
+       x="42"
+       y="-6.7558389"
+       transform="rotate(90)"
+       clip-path="url(#clipPath3170)" />
+    <g
+       id="g3130"
+       clip-path="url(#clipPath3166)">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect2661-7-4-3"
+         d="m -15.857422,99.199219 a 0.40003998,0.40003998 0 0 0 -0.40039,0.40039 V 102 a 0.40003998,0.40003998 0 0 0 0.40039,0.40039 h 51 A 0.40003998,0.40003998 0 0 0 35.542969,102 v -2.400391 a 0.40003998,0.40003998 0 0 0 -0.400391,-0.40039 z M -15.457031,100 h 50.199219 v 1.59961 h -50.199219 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <rect
+         y="99.599998"
+         x="-15.857142"
+         height="2.4000001"
+         width="51"
+         id="rect2661-7-4"
+         style="display:inline;opacity:1;fill:#232841;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+      <rect
+         y="99.599998"
+         x="-15.857135"
+         height="0.79999995"
+         width="51.119732"
+         id="rect2807-5-23"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.31313129;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
