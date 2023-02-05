@@ -530,7 +530,7 @@ TextureImporter:
       name: Cosmetic_Grids_20
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 128
         width: 64
         height: 64
@@ -551,7 +551,7 @@ TextureImporter:
       name: Cosmetic_Grids_21
       rect:
         serializedVersion: 2
-        x: 320
+        x: 256
         y: 128
         width: 64
         height: 64
@@ -572,8 +572,8 @@ TextureImporter:
       name: Cosmetic_Grids_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 320
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -593,7 +593,7 @@ TextureImporter:
       name: Cosmetic_Grids_23
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 64
         width: 64
         height: 64
@@ -614,7 +614,7 @@ TextureImporter:
       name: Cosmetic_Grids_24
       rect:
         serializedVersion: 2
-        x: 128
+        x: 320
         y: 64
         width: 64
         height: 64
