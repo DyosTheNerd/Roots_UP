@@ -796,15 +796,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nIn a not so distant future, at a not so distant place.\r\n\nIs a world
-    really fucked up and thanks to modern weapons, new technologies and less wise
-    decisions, the world has changed. \r\nBut even if these developments has changed
-    much to the negative, there were also positive. Where humans and animals haven't
-    really survived the changes, plants have risen to new heights and made the same
-    damn mistakes.\r\n\nToday, the wise heads of plant communities have sunk into
-    a deep sleep to preserve their remaining powers and protect their children. They
-    wait for a future that may never come.\r\n\nBut a new hope has uprooted itself
-    and set out to fight for a better world in a hostile environment.\r\n"
+  m_text: "\nIn a not so distant future, at a not so distant place.\r\n\nThe world
+    is really f*d up and thanks to modern weapons, new technologies and other less
+    wise decisions, the world has changed. \r\nBut even if these developments have
+    changed much to the negative, there were also positive. Where humans and animals
+    did not really survive the changes, plants have risen to new heights and made
+    the same damn mistakes.\r\n\nToday, the wise heads of plant communities have
+    sunk into a deep sleep to preserve their remaining powers and protect their children.
+    They wait for a future that may never come.\r\n\nBut a new hope has uprooted
+    itself and set out to fight for a better world in a hostile environment.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
