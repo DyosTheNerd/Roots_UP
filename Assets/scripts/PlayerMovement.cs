@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W) && isGrounded && !jumpdebounce && !canClimb)
             {
+                //ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerJumped());
                 jumpdebounce = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumppower);
                 //rb.AddForce(new Vector2(0, jumppower));
@@ -102,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
             if (!Input.GetKey(KeyCode.W))
             {
                 sincejump = 0;
-                animator.SetBool("jumped", true);
             }
             
             if (Input.GetKey(KeyCode.S))
@@ -115,6 +115,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 jumpdebounce = false;
                 timeelapsed = 0;
+            }
+
+
+            if (isGrounded == false)
+            {
+                animator.SetBool("jumped", true);
+            }
+            else
+                {
+                animator.SetBool("jumped", false);
             }
 
             animator.SetInteger("run", movedirection);
@@ -149,7 +159,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (isClimbing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, climbspeed);
+            //ExecuteEvents.Execute<PlayerActionMessages>(gameObject, null, (x, y) => x.OnPlayerClimbing());
+            rb.velocity = new Vector2(rb.velocity.x, climbspeed); 
         }
         //rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x * 0.9f, -maxspeed, maxspeed), rb.velocity.y);
 
@@ -167,7 +178,6 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             jumped = false;
 
-            animator.SetBool("jumped", false);
         }
         canClimb = false;
         if (mainCollider.IsTouchingLayers(LayerMask.GetMask("Climbable")))
