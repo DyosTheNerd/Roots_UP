@@ -6,11 +6,14 @@ namespace DefaultNamespace.Plants
     public class HangingPlant : BasePlant
     {
 
-        public GameObject plantAliveObject;
+        public GameObject[] plantstoalive;
         protected override void becomeAlive()
         {
             base.becomeAlive();
-            ExecuteEvents.Execute<TogglePlantAliveEvent>(plantAliveObject, null, (x, y) => x.TogglePlantAliveMessage());            
+            for (int i = 0; i < plantstoalive.Length; i++)
+            {
+                plantstoalive[i].GetComponent<HangingPlantLadder>().activate();
+            }
         }
     }
 }
