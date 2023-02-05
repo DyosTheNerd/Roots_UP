@@ -182,7 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b7182cc1854514f8190a8153009844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifebarVisualizer: {fileID: 7902665981760567164}
+  innerBar: {fileID: 0}
+  percText: {fileID: 0}
   playerObject: {fileID: 7902665981903059089}
 --- !u!1 &7902665981903059089
 GameObject:
@@ -349,7 +350,6 @@ GameObject:
   - component: {fileID: 7902665981964034928}
   - component: {fileID: 992082517}
   - component: {fileID: 7902665981964034931}
-  - component: {fileID: 8294347869822423838}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e637cd992975bc44961c6826ff4b9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!95 &7902665981964034931
 Animator:
   serializedVersion: 5
@@ -600,19 +601,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &8294347869822423838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7902665981964034930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb276cb3c742b1f42b322af4fed924a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundlib: {fileID: 8523504563266519296}
 --- !u!1 &7902665982716376332
 GameObject:
   m_ObjectHideFlags: 0

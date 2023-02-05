@@ -14,9 +14,9 @@ public class ButtonScript : MonoBehaviour
 
     public void quit()
     {
-        SceneManager.LoadScene("01Start");
-        //Debug.Log("QUITTING");
-        //Application.Quit();
+        //SceneManager.LoadScene("01Start");
+        Debug.Log("QUITTING");
+        Application.Quit();
     }
 
     public void backtomenu()
