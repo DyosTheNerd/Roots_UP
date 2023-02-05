@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace.Player;
@@ -19,6 +20,7 @@ public class SkyParallax : MonoBehaviour
     {
         Vector3 currentV3 = PlayerSingletonProvider.getPlayerGameObject().transform.position;
         
+
         if (lastV3 != null)
         {
             transformParallax(currentV3, lastV3);
