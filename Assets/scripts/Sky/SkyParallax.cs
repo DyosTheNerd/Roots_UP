@@ -33,7 +33,7 @@ public class SkyParallax : MonoBehaviour
     {
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
-            ExecuteEvents.Execute<SkyEvent>(gameObject.transform.GetChild(i).gameObject, null, (x, y) => x.("oxygen"));
+            ExecuteEvents.Execute<SkyEvent>(gameObject.transform.GetChild(i).gameObject, null, (x, y) => x.DeltaEvent(current,old));
         }
     }
     
