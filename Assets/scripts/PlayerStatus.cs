@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,8 +10,11 @@ namespace DefaultNamespace
 
         public bool isDead = false;
         private bool canMove = true;
+        
 
         public Animator animator;
+
+        public List<AudioClip> soundList = new List<AudioClip>();
 
         public bool IsDead
         {
@@ -35,6 +40,7 @@ namespace DefaultNamespace
             
             AudioSource myAudioSrc = this.gameObject.GetComponent<AudioSource>();   // ab hier änderungen
             myAudioSrc.enabled = true;
+            myAudioSrc.clip = soundList[0];
             myAudioSrc.Play();
 
             //versuch den sound von main camera auszuschalten
